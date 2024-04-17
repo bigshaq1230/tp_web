@@ -177,7 +177,7 @@ main {
 .featured-products .product-list {
   display: flex;
   flex-wrap: wrap;
-  justify-content: start;
+  justify-content: center;
 }
 
 .featured-products .product-list div {
@@ -203,4 +203,38 @@ main {
   padding: 20px;
   text-align: center;
   margin-top: 20px;
+}
+.reviews-container {
+  margin: 20px auto;
+  padding: 20px;
+  display: flex;
+  gap: 1%;
+  flex-wrap: wrap;
+}
+
+.review {
+  margin: 2%;
+  padding: 10px;
+  width: 250px;
+  height: auto;
+  border-radius: 25px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+.review img {
+  height: 50px;
+  width: auto;
+  margin-left: 35%;
+  object-fit: scale-down;
+}
+.review-text {
+  color: #705b5b;
+}
+
+.review-author {
+  color: #7c6868;
+}
+
+.review h2 {
+  text-align: center;
+  color: #0f4c81;
 }
