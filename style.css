@@ -145,7 +145,6 @@ main {
 }
 
 .category-item {
-  width: 300px;
   height: 300px;
   box-shadow: 0 2px 5px rgba(0,0,0,0.1);
   margin: 10px;
@@ -156,7 +155,7 @@ main {
 }
 
 .category-item img {
-  width: 100%;
+  width: auto;
   height: 100%;  /* Keep the image aspect ratio */
   border-radius: 8px;  /* Rounded corners for the image */
 
@@ -169,23 +168,35 @@ main {
 .category-item h3 {
   margin: 0;
   margin-top: 10px;  /* Space between image and text */
-  color: #333;  /* Text color */
+  color: #8c7474;  /* Text color */
 }
+
+
+
 
 .featured-products .product-list {
   display: flex;
   flex-wrap: wrap;
-  justify-content: space-around;
+  justify-content: start;
 }
 
 .featured-products .product-list div {
-  width: 30%;
-  margin: 10px;
-  padding: 10px;
+  position: relative;
+  width: 300px;
+  height: 300px;
+  margin: 0.5%;
   background-color: white;
   box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+  border-radius: 10px;
+  text-align: center;
+  align-items: center;
 }
+.product-list img {
+  width: 60%;
+  height: 60%;
+  margin-top: 15px;
 
+}
 .promo {
   background-color: #deb887;
   color: white;
