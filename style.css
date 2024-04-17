@@ -1,0 +1,195 @@
+@import url('https://fonts.googleapis.com/css?family=Work+Sans:400,600');
+
+
+
+body {
+  margin: 0;
+  background: #222;
+  font-family: 'Work Sans', sans-serif;
+  font-weight: 800;
+}
+
+.container {
+  width: 80%;
+  margin: 0 auto;
+}
+
+header {
+  background: #ab785a;
+}
+
+header::after {
+  content: '';
+  display: table;
+  clear: both;
+}
+
+.logo {
+  position: relative;
+  float: left;
+  padding: 10px 0;
+  height: 5vh;
+  margin-left: 5%;
+}
+
+nav {
+  float: right;
+}
+
+nav ul {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+nav li {
+  display: inline-block;
+  margin-left: 50px;
+  padding-top: 25px;
+
+  position: relative;
+}
+
+nav a {
+  color: #444;
+  text-decoration: none;
+  text-transform: uppercase;
+  font-size: 14px;
+}
+
+nav a:hover {
+  color: #000;
+}
+
+nav a::before {
+  content: '';
+  display: block;
+  height: 5px;
+  background-color: #444;
+
+  position: absolute;
+  top: 0;
+  width: 0%;
+
+  transition: all ease-in-out 250ms;
+}
+
+nav a:hover::before {
+  width: 100%;
+}
+
+nav ul li a.active {
+  color: wheat;
+  /* Color when link is active */
+}
+
+
+.search input {
+  border: 0;
+  border-radius: 4px;
+  outline: 0;
+  width: 250px;
+  /* Sets the width of the input field */
+  margin-left: 5%;
+
+}
+
+.search * {
+  position: relative;
+  padding-top: 100px;
+  align-items: center;
+  top: 10px;
+
+  height: 40px;
+  /* Sets the height of the input field */
+  font-size: 20px;
+  /* Increases the font size inside the input field */
+  padding: 5px 10px;
+}
+body, html {
+  width: 100%;
+  height: 100%;
+}
+
+
+
+/* Footer */
+footer {
+  background-color: #463f3a;
+  color: white;
+  text-align: center;
+  padding: 10px;
+
+  max-width: 100vw;
+}
+
+footer p {
+  font-size: 1em;
+}
+main {
+  padding: 20px;
+}
+
+
+
+.categories {
+  margin: 20px 0;
+  text-align: center;
+}
+
+.category-list {
+  display: flex;
+  justify-content: center ;
+  gap: 50px;
+
+}
+
+.category-item {
+  width: 300px;
+  height: 300px;
+  box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+  margin: 10px;
+  text-align: center;
+  border-radius: 10px;  /* Rounded corners */
+  transition: transform 0.3s ease, box-shadow 0.3s ease;  /* Smooth transitions for transform and shadow */
+  cursor: pointer;  /* Indicates this is clickable */
+}
+
+.category-item img {
+  width: 100%;
+  height: 100%;  /* Keep the image aspect ratio */
+  border-radius: 8px;  /* Rounded corners for the image */
+
+}
+.category-item:hover {
+  transform: scale(1.05);  /* Scales up the div */
+  box-shadow: 0 8px 20px rgba(0,0,0,0.2);  /* Adds a shadow effect */
+
+}
+.category-item h3 {
+  margin: 0;
+  margin-top: 10px;  /* Space between image and text */
+  color: #333;  /* Text color */
+}
+
+.featured-products .product-list {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+}
+
+.featured-products .product-list div {
+  width: 30%;
+  margin: 10px;
+  padding: 10px;
+  background-color: white;
+  box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+}
+
+.promo {
+  background-color: #deb887;
+  color: white;
+  padding: 20px;
+  text-align: center;
+  margin-top: 20px;
+}
