@@ -134,6 +134,93 @@
         footer p {
             font-size: 1em;
         }
+
+.featured-products .product-list {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+.featured-products .product-list div {
+  position: relative;
+  width: 300px;
+  height: 300px;
+  margin: 0.5%;
+  background-color: white;
+  box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+  border-radius: 10px;
+  text-align: center;
+  align-items: center;
+}
+.product-list img {
+  width: 60%;
+  height: 60%;
+  margin-top: 15px;
+
+}
+#coffee-accessories-intro {
+    padding: 20px;
+    text-align: center;
+}
+
+#coffee-accessories-intro .container {
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+#coffee-accessories-intro h1 {
+    color: #6b3636;
+    margin-bottom: 10px;
+}
+
+#coffee-accessories-intro p {
+    color: #555;
+    font-size: 16px;
+    line-height: 1.6;
+}
+
+.features {
+    display: flex;
+    justify-content: space-around;
+    margin-top: 20px;
+}
+
+.feature-item {
+    width: 30%;
+    padding: 10px;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+    border-radius: 5px;
+    background: #f9f9f9;
+}
+
+.feature-item img {
+    width: 100%;
+    height: auto;
+    border-radius: 5px;
+    margin-bottom: 15px;
+}
+
+.feature-item h3 {
+    color:  #877a32;
+}
+
+.feature-item p {
+    font-size: 14px;
+    color: #666;
+}
+
+@media (max-width: 768px) {
+    .features {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .feature-item {
+        width: 80%;
+        margin-bottom: 20px;
+    }
+}
+
     </style>
 </head>
 
@@ -161,7 +248,65 @@
 
 
     <div style="width: 80%;margin-left: auto;margin-right: auto;">
+        <br>
+        <section id="coffee-accessories-intro">
+            <br>
+            <div class="container">
+                <h1 style="font-size: xx-large;">Explore Our Premium Coffee Accessories</h1>
+                <p>Enhance your coffee experience with our high-quality, durable coffee accessories. Whether you're a beginner or a seasoned barista, our carefully selected range is designed to perfect your coffee routine.</p>
+                <br>
+                <div class="features">
+                    <div class="feature-item">
+                        <h3>Durable Materials</h3>
+                        <p>Our accessories are crafted from materials that stand the test of time and use.</p>
+                    </div>
+                    <div class="feature-item">
+                        <h3>Precision Brewing</h3>
+                        <p>Achieve perfect brews every time with precise measurements and quality tools.</p>
+                    </div>
+                    <div class="feature-item">
+                        <h3>Stylish Designs</h3>
+                        <p>Not only functional but also aesthetically pleasing, blending seamlessly into your kitchen decor.</p>
+                    </div>
+                </div>
+            </section>
+            <br><br><br>
 
+        <div class="featured-products">
+            <h4 style="font-size: 40px;text-align: center;color: #ab785a;">Featured Products:</h4>
+            <div class="product-list">
+            <div>
+                <img src="https://ecscoffee.com/cdn/shop/products/ecm-pressure-regulating-tamper.jpg?v=1681302105&width=900"
+                    alt="Pressure Regulating Tamper">
+                <h3>Pressure Regulating Tamper</h3>
+                <p>$9.99</p>
+            </div>
+            <div>
+                <img src="https://ecscoffee.com/cdn/shop/products/crema-the-wdt-tool-1.jpg?v=1646845280&width=900"
+                    alt="Crema The WDT Tool">
+                <h3>Crema The WDT Tool</h3>
+                <p>$4.99</p>
+            </div>
+            <div>
+                <img src="https://ecscoffee.com/cdn/shop/products/crema-53mm-dosing-cup-1.jpg?v=1646929540&width=900"
+                    alt="Crema 53.4 mm Dosing Cup, Brushed Silver">
+                <h3>Crema 53.4 mm Dosing Cup, Brushed Silver</h3>
+                <p>$4.99</p>
+            </div>
+            <div>
+                <img src="https://ecscoffee.com/cdn/shop/products/54mm_dosing_funnel_crema.jpg?v=1651233574&width=900"
+                    alt="Crema 54mm Dosing Funnel">
+                <h3>Crema 54mm Dosing Funnel</h3>
+                <p>$4.99</p>
+            </div>
+            <div>
+                <img src="https://ecscoffee.com/cdn/shop/products/Crema-53mm-Tamper-Distributor-Combo-6.jpg?v=1646932262&width=900"
+                    alt="Crema 53.3mm Tamper & Distributor Combo">
+                <h3>Crema 53.3mm Tamper & Distributor Combo</h3>
+                <p>$4.99</p>
+            </div>
+
+        </div>
     </div>
     <footer>
         <p>Contact us at support@coffeecentral.com</p>
