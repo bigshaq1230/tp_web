@@ -6,6 +6,135 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
     <style>
+        .btn-31,
+        .btn-31 *,
+        .btn-31 :after,
+        .btn-31 :before,
+        .btn-31:after,
+        .btn-31:before {
+            border: 0 solid;
+            box-sizing: border-box;
+        }
+
+        .btn-31 {
+            -webkit-tap-highlight-color: transparent;
+            -webkit-appearance: button;
+            background-color: #000;
+            background-image: none;
+            color: #fff;
+            cursor: pointer;
+            font-family: ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont,
+                Segoe UI, Roboto, Helvetica Neue, Arial, Noto Sans, sans-serif,
+                Apple Color Emoji, Segoe UI Emoji, Segoe UI Symbol, Noto Color Emoji;
+            font-size: 100%;
+            font-weight: 900;
+            line-height: 1.5;
+            margin: 0;
+            -webkit-mask-image: -webkit-radial-gradient(#000, #fff);
+            padding: 0;
+        }
+
+        .btn-31:disabled {
+            cursor: default;
+        }
+
+        .btn-31:-moz-focusring {
+            outline: auto;
+        }
+
+        .btn-31 svg {
+            display: block;
+            vertical-align: middle;
+        }
+
+        .btn-31 [hidden] {
+            display: none;
+        }
+
+        .btn-31 {
+            border-width: 1px;
+            padding: 1rem 2rem;
+            position: relative;
+            text-transform: uppercase;
+        }
+
+        .btn-31:before {
+            --progress: 100%;
+            background: #fff;
+            -webkit-clip-path: polygon(100% 0,
+                    var(--progress) var(--progress),
+                    0 100%,
+                    100% 100%);
+            clip-path: polygon(100% 0,
+                    var(--progress) var(--progress),
+                    0 100%,
+                    100% 100%);
+            content: "";
+            inset: 0;
+            position: absolute;
+            transition: -webkit-clip-path 0.2s ease;
+            transition: clip-path 0.2s ease;
+            transition: clip-path 0.2s ease, -webkit-clip-path 0.2s ease;
+        }
+
+        .btn-31:hover:before {
+            --progress: 0%;
+        }
+
+        .btn-31 .text-container {
+            display: block;
+            overflow: hidden;
+            position: relative;
+        }
+
+        .btn-31 .text {
+            display: block;
+            font-weight: 900;
+            mix-blend-mode: difference;
+            position: relative;
+        }
+
+        .btn-31:hover .text {
+            -webkit-animation: move-up-alternate 0.3s ease forwards;
+            animation: move-up-alternate 0.3s ease forwards;
+        }
+
+        @-webkit-keyframes move-up-alternate {
+            0% {
+                transform: translateY(0);
+            }
+
+            50% {
+                transform: translateY(80%);
+            }
+
+            51% {
+                transform: translateY(-80%);
+            }
+
+            to {
+                transform: translateY(0);
+            }
+        }
+
+        @keyframes move-up-alternate {
+            0% {
+                transform: translateY(0);
+            }
+
+            50% {
+                transform: translateY(80%);
+            }
+
+            51% {
+                transform: translateY(-80%);
+            }
+
+            to {
+                transform: translateY(0);
+            }
+        }
+
         @import url('https://fonts.googleapis.com/css?family=Work+Sans:400,600');
 
         body {
@@ -13,11 +142,6 @@
             background: #222;
             font-family: 'Work Sans', sans-serif;
             font-weight: 800;
-        }
-
-        .container {
-            width: 80%;
-            margin: 0 auto;
         }
 
         header {
@@ -134,12 +258,116 @@
         footer p {
             font-size: 1em;
         }
+
+        img.intro {
+            width: 100%;
+            object-fit: contain;
+        }
+
+        .test {
+            display: block;
+            text-align: center;
+        }
+
+        .test div {
+            display: inline-block;
+        }
+
+        .categories {
+            margin: 20px 0;
+            text-align: center;
+        }
+
+        .category-list {
+            display: flex;
+            justify-content: center;
+            gap: 50px;
+
+        }
+
+        .category-item {
+            height: 300px;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+            margin: 10px;
+            text-align: center;
+            border-radius: 10px;
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+            cursor: pointer;
+        }
+
+        .category-item img {
+            width: auto;
+            height: 100%;
+            border-radius: 8px;
+
+        }
+
+        .category-item:hover {
+            transform: scale(1.05);
+            /* Scales up the div */
+            box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
+            /* Adds a shadow effect */
+
+        }
+
+        .category-item h3 {
+            margin: 0;
+            margin-top: 10px;
+            /* Space between image and text */
+            color: #8c7474;
+            /* Text color */
+        }
+
+
+        .container {
+            display: flex;
+            flex-wrap: wrap;
+            -ms-flex-item-align: baseline;
+            gap: 20px;
+            /* Space between the menu and products */
+            flex-wrap: nowrap;
+            flex-direction: row;
+        }
+
+        .menu {
+            flex: 0 0 150px;
+            /* Fixed width of 200px, does not grow or shrink */
+            min-width: 100px;
+            /* Minimum width, identical to flex-basis for clarity */
+        }
+
+        .menu ul {
+            list-style: none;
+            padding: 0;
+        }
+
+
+        .products {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 10px;
+            /* Space between products */
+        }
+
+        .product {
+            flex: 0 0 200px;
+            /* Does not grow or shrink, fixed basis of 300px */
+            width: 200px;
+            /* Strict width of 300px */
+            height: 200px;
+            /* Strict height of 300px */
+            background: #ddd;
+            padding: 20px;
+            text-align: center;
+            box-sizing: border-box;
+            /* Include padding in the width and height */
+        }
     </style>
 </head>
 
 <body>
     <header>
-        <div class="container">
+        <div class="nav-container">
             <img src="img/costa.svg" alt="" class="logo">
 
             <span class="search">
@@ -160,14 +388,98 @@
     </header>
 
 
+
+
+    <br>
+    <img class="intro" src="img/espresso_machine_intro2.jpg" alt="background">
+
+    <div class="test">
+        <h2 style="margin-bottom: 0;">Coffe Makers</h2>
+        <div style="width: 10%;height: 5px;background-color: red;margin-top: 5px;"></div>
+    </div>
+    <div class="categories">
+        <div class="category-list">
+            <a href="asseciories.html" style="text-decoration: none; color: inherit;">
+
+                <div class="category-item">
+                    <img src="img/automatic-coffee-makers-featured-image_600x.jpg" alt="Coffee Beans">
+                    <h3>Automatic Coffee Makers</h3>
+                </div>
+            </a>
+
+            <a href="asseciories.html" style="text-decoration: none; color: inherit;">
+
+                <div class="category-item">
+                    <img src="img/single.jpg" alt="Coffee Beans">
+                    <h3>Single Serve Coffee</h3>
+                </div>
+            </a>
+
+            <a href="asseciories.html" style="text-decoration: none; color: inherit;">
+
+                <div class="category-item">
+                    <img src="img/pour.jpg" alt="Coffee Beans">
+                    <h3>Pour Over Coffee Maker</h3>
+                </div>
+            </a>
+
+            <a href="asseciories.html" style="text-decoration: none; color: inherit;">
+
+                <div class="category-item">
+                    <img src="img/french.jpg" alt="Coffee Beans">
+                    <h3>French Press</h3>
+                </div>
+            </a>
+
+        </div>
+    </div>
+    <br><br>
     <div style="width: 80%;margin-left: auto;margin-right: auto;">
 
+        <h1>
+            Discover the Perfect Brew with Our Exceptional Range of Coffee Makers
+        </h1>
+        <h4>At COSTA, we understand that the heart of every coffee lover's home is their coffee maker. That's why we've
+            curated a selection of the finest coffee makers on the market, designed to cater to all brewing preferences
+            and styles. Whether you're a fan of the classic drip coffee, the rich espresso, or the versatile French
+            press, we have the perfect machine for you.</h4>
+
+        <h2>Explore Our Variety</h2>
+    </div>
+
+
+    <div class="nav-container">
+        <div class="menu">
+            <h4>Filters</h4>
+            <ul>
+                <li><input type="checkbox"><span>nespressoo</span></li>
+                <li><input type="checkbox"><span>Aeropress</span></li>
+                <li><input type="checkbox"><span>Capresso</span></li>
+                <li><input type="checkbox"><span>Bunn</span></li>
+                <li><input type="checkbox"><span>Bonavita</span></li>
+                <li><input type="checkbox"><span>Bodum</span></li>
+            </ul>
+        </div>
+        <div class="products">
+            <div class="product">Product 1</div>
+            <div class="product">Product 2</div>
+            <div class="product">Product 3</div>
+            <div class="product">Product 4</div>
+            <div class="product">Product 4</div>
+            <div class="product">Product 4</div>
+            <div class="product">Product 4</div>
+            <div class="product">Product 4</div>
+            <div class="product">Product 4</div>
+            <div class="product">Product 4</div>
+            <div class="product">Product 4</div>
+            <div class="product">Product 4</div>
+            <div class="product">Product 4</div>
+            <!-- Add more products as needed -->
+        </div>
     </div>
     <footer>
         <p>Contact us at support@coffeecentral.com</p>
     </footer>
-
-
 
 </body>
 
