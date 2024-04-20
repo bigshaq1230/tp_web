@@ -6,6 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
     <style>
+        /*
         .btn-31,
         .btn-31 *,
         .btn-31 :after,
@@ -134,7 +135,7 @@
                 transform: translateY(0);
             }
         }
-
+*/
         @import url('https://fonts.googleapis.com/css?family=Work+Sans:400,600');
 
         body {
@@ -237,11 +238,6 @@
             padding: 5px 10px;
         }
 
-        body,
-        html {
-            width: 100%;
-            height: 100%;
-        }
 
 
 
@@ -317,7 +313,11 @@
             color: #8c7474;
             /* Text color */
         }
-
+        .nav_container {
+            width: 90%;
+            margin-left: auto;
+            margin-right: auto;
+        }
 
         .container {
             display: flex;
@@ -350,11 +350,11 @@
         }
 
         .product {
-            flex: 0 0 200px;
+            flex: 0 0 300px;
             /* Does not grow or shrink, fixed basis of 300px */
-            width: 200px;
+            width: 300px;
             /* Strict width of 300px */
-            height: 200px;
+            height: 300px;
             /* Strict height of 300px */
             background: #ddd;
             padding: 20px;
@@ -362,12 +362,17 @@
             box-sizing: border-box;
             /* Include padding in the width and height */
         }
+        .product img {
+            height: 90%;
+            width: 100%;
+            object-fit: contain;
+        }
     </style>
 </head>
 
 <body>
     <header>
-        <div class="nav-container">
+        <div class="nav_container">
             <img src="img/costa.svg" alt="" class="logo">
 
             <span class="search">
@@ -448,7 +453,7 @@
     </div>
 
 
-    <div class="nav-container">
+    <div class="container">
         <div class="menu">
             <h4>Filters</h4>
             <ul>
@@ -461,10 +466,17 @@
             </ul>
         </div>
         <div class="products">
-            <div class="product">Product 1</div>
-            <div class="product">Product 2</div>
-            <div class="product">Product 3</div>
-            <div class="product">Product 4</div>
+            <div class="product">
+                <img src="img/chemex-6-cup.webp" alt="">Chemex CM-6A Classic Series 6-Cup Coffeemaker
+
+            </div>
+            <div class="product"><img src="https://ecscoffee.com/cdn/shop/products/aeropress-coffee-maker-new.jpg?v=1597323596&width=900" alt="">
+                AeroPress Coffee & Espresso Maker
+            </div>
+            <div class="product"><img src="https://ecscoffee.com/cdn/shop/products/keurig-k1500.jpg?v=1569549492" alt="">Keurig K1500 Small Business Brewing System
+            </div>
+            <div class="product"><img src="https://ecscoffee.com/cdn/shop/products/smeg-coffee-maker-white-DCF02WHUS.jpg?v=1587479943&width=900" alt="">
+                Smeg 50s Style Drip Filter Coffee Machine, White #DCF02WHUS</div>
             <div class="product">Product 4</div>
             <div class="product">Product 4</div>
             <div class="product">Product 4</div>
