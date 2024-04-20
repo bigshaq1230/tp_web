@@ -1,109 +1,109 @@
 @import url('https://fonts.googleapis.com/css?family=Work+Sans:400,600');
 
 body {
-    margin: 0;
-    background: #222;
-    font-family: 'Work Sans', sans-serif;
-    font-weight: 800;
+  margin: 0;
+  background: #222;
+  font-family: 'Work Sans', sans-serif;
+  font-weight: 800;
 }
 
 header {
-    background: #ab785a;
+  background: #ab785a;
 }
 
 header::after {
-    content: '';
-    display: table;
-    clear: both;
+  content: '';
+  display: table;
+  clear: both;
 }
 
 .logo {
-    position: relative;
-    float: left;
-    padding: 10px 0;
-    height: 5vh;
-    margin-left: 5%;
+  position: relative;
+  float: left;
+  padding: 10px 0;
+  height: 5vh;
+  margin-left: 5%;
 }
 
 nav {
-    float: right;
+  float: right;
 }
 
 nav ul {
-    margin: 0;
-    padding: 0;
-    list-style: none;
+  margin: 0;
+  padding: 0;
+  list-style: none;
 }
 
 nav li {
-    display: inline-block;
-    margin-left: 50px;
-    padding-top: 25px;
+  display: inline-block;
+  margin-left: 50px;
+  padding-top: 25px;
 
-    position: relative;
+  position: relative;
 }
 
 nav a {
-    color: #444;
-    text-decoration: none;
-    text-transform: uppercase;
-    font-size: 14px;
+  color: #444;
+  text-decoration: none;
+  text-transform: uppercase;
+  font-size: 14px;
 }
 
 nav a:hover {
-    color: #000;
+  color: #000;
 }
 
 nav a::before {
-    content: '';
-    display: block;
-    height: 5px;
-    background-color: #444;
+  content: '';
+  display: block;
+  height: 5px;
+  background-color: #444;
 
-    position: absolute;
-    top: 0;
-    width: 0%;
+  position: absolute;
+  top: 0;
+  width: 0%;
 
-    transition: all ease-in-out 250ms;
+  transition: all ease-in-out 250ms;
 }
 
 nav a:hover::before {
-    width: 100%;
+  width: 100%;
 }
 
 nav ul li a.active {
-    color: wheat;
-    /* Color when link is active */
+  color: wheat;
+  /* Color when link is active */
 }
 
 
 .search input {
-    border: 0;
-    border-radius: 4px;
-    outline: 0;
-    width: 250px;
-    /* Sets the width of the input field */
-    margin-left: 5%;
+  border: 0;
+  border-radius: 4px;
+  outline: 0;
+  width: 250px;
+  /* Sets the width of the input field */
+  margin-left: 5%;
 
 }
 
 .search * {
-    position: relative;
-    padding-top: 100px;
-    align-items: center;
-    top: 10px;
+  position: relative;
+  padding-top: 100px;
+  align-items: center;
+  top: 10px;
 
-    height: 40px;
-    /* Sets the height of the input field */
-    font-size: 20px;
-    /* Increases the font size inside the input field */
-    padding: 5px 10px;
+  height: 40px;
+  /* Sets the height of the input field */
+  font-size: 20px;
+  /* Increases the font size inside the input field */
+  padding: 5px 10px;
 }
 
 body,
 html {
-    width: 100%;
-    height: 100%;
+  width: 100%;
+  height: 100%;
 }
 
 
@@ -131,68 +131,57 @@ footer p {
 
 .category-list {
   display: flex;
-  justify-content: center ;
+  justify-content: center;
   gap: 50px;
 
 }
-.container {
+
+.nav_container {
   width: 90%;
   margin-left: auto;
   margin-right: auto;
 }
+
 .category-item {
   height: 300px;
-  box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
   margin: 10px;
   text-align: center;
-  border-radius: 10px;  /* Rounded corners */
-  transition: transform 0.3s ease, box-shadow 0.3s ease;  /* Smooth transitions for transform and shadow */
-  cursor: pointer;  /* Indicates this is clickable */
+  border-radius: 10px;
+  /* Rounded corners */
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  /* Smooth transitions for transform and shadow */
+  cursor: pointer;
+  /* Indicates this is clickable */
 }
 
 .category-item img {
   width: auto;
-  height: 100%;  /* Keep the image aspect ratio */
-  border-radius: 8px;  /* Rounded corners for the image */
+  height: 100%;
+  /* Keep the image aspect ratio */
+  border-radius: 8px;
+  /* Rounded corners for the image */
 
 }
+
 .category-item:hover {
-  transform: scale(1.05);  /* Scales up the div */
-  box-shadow: 0 8px 20px rgba(0,0,0,0.2);  /* Adds a shadow effect */
+  transform: scale(1.05);
+  /* Scales up the div */
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
+  /* Adds a shadow effect */
 
 }
+
 .category-item h3 {
   margin: 0;
-  margin-top: 10px;  /* Space between image and text */
-  color: #8c7474;  /* Text color */
+  margin-top: 10px;
+  /* Space between image and text */
+  color: #8c7474;
+  /* Text color */
 }
 
 
 
-
-.featured-products .product-list {
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: center;
-}
-
-.featured-products .product-list div {
-  position: relative;
-  width: 300px;
-  height: 300px;
-  margin: 0.5%;
-  background-color: white;
-  box-shadow: 0 2px 5px rgba(0,0,0,0.1);
-  border-radius: 10px;
-  text-align: center;
-  align-items: center;
-}
-.product-list img {
-  width: 60%;
-  height: 60%;
-  margin-top: 15px;
-
-}
 .promo {
   background-color: #deb887;
   color: white;
@@ -200,6 +189,7 @@ footer p {
   text-align: center;
   margin-top: 20px;
 }
+
 .reviews-container {
   margin: 20px auto;
   padding: 20px;
@@ -216,12 +206,14 @@ footer p {
   border-radius: 25px;
   box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
 }
+
 .review img {
   height: 50px;
   width: auto;
   margin-left: 35%;
   object-fit: scale-down;
 }
+
 .review-text {
   color: #705b5b;
 }
@@ -234,9 +226,8 @@ footer p {
   text-align: center;
   color: #0f4c81;
 }
+
 .hero {
-  background-size: cover;
-  background-position: center;
   color: rgb(255, 255, 255);
   text-align: center;
 }
@@ -253,12 +244,14 @@ footer p {
 figure {
   position: relative;
 }
+
 figure img {
   border-radius: 25px;
   width: 100%;
   object-fit: contain;
 }
-figure figcaption{
+
+figure figcaption {
   color: aliceblue;
   position: absolute;
   top: 15%;
@@ -266,4 +259,26 @@ figure figcaption{
   display: block;
   width: 30%;
   height: 30%;
+}
+
+.imgnexttotext {
+  display: flex;
+  align-items: center; /* Vertically align items */
+  gap: 20px;
+}
+
+/* Style the image and text as needed */
+img {
+  max-width: 100%; /* Ensure the image doesn't overflow */
+  border-radius: 10px;
+  /* Add other image styles here */
+}
+
+.imgnexttotext  div {
+  margin-left: 30px; /* Adjust spacing between image and text */
+  margin-right: 30px; /* Adjust spacing between image and text */
+
+  /* Add other text styles here */
+  width: 35%;
+  font: optional;
 }

@@ -5,228 +5,13 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
-    <style>
-        @import url('https://fonts.googleapis.com/css?family=Work+Sans:400,600');
-
-        body {
-            margin: 0;
-            background: #222;
-            font-family: 'Work Sans', sans-serif;
-            font-weight: 800;
-        }
-
-        .container {
-            width: 90%;
-            margin: 0 auto;
-        }
-
-        header {
-            background: #ab785a;
-        }
-
-        header::after {
-            content: '';
-            display: table;
-            clear: both;
-        }
-
-        .logo {
-            position: relative;
-            float: left;
-            padding: 10px 0;
-            height: 5vh;
-            margin-left: 5%;
-        }
-
-        nav {
-            float: right;
-        }
-
-        nav ul {
-            margin: 0;
-            padding: 0;
-            list-style: none;
-        }
-
-        nav li {
-            display: inline-block;
-            margin-left: 50px;
-            padding-top: 25px;
-
-            position: relative;
-        }
-
-        nav a {
-            color: #444;
-            text-decoration: none;
-            text-transform: uppercase;
-            font-size: 14px;
-        }
-
-        nav a:hover {
-            color: #000;
-        }
-
-        nav a::before {
-            content: '';
-            display: block;
-            height: 5px;
-            background-color: #444;
-
-            position: absolute;
-            top: 0;
-            width: 0%;
-
-            transition: all ease-in-out 250ms;
-        }
-
-        nav a:hover::before {
-            width: 100%;
-        }
-
-        nav ul li a.active {
-            color: wheat;
-            /* Color when link is active */
-        }
-
-
-        .search input {
-            border: 0;
-            border-radius: 4px;
-            outline: 0;
-            width: 250px;
-            /* Sets the width of the input field */
-            margin-left: 5%;
-
-        }
-
-        .search * {
-            position: relative;
-            padding-top: 100px;
-            align-items: center;
-            top: 10px;
-
-            height: 40px;
-            /* Sets the height of the input field */
-            font-size: 20px;
-            /* Increases the font size inside the input field */
-            padding: 5px 10px;
-        }
-
-        body,
-        html {
-            width: 100%;
-            height: 100%;
-        }
-
-
-
-        /* Footer */
-        footer {
-            background-color: #463f3a;
-            color: white;
-            text-align: center;
-            padding: 10px;
-
-            max-width: 100vw;
-        }
-
-        footer p {
-            font-size: 1em;
-        }
-
-.featured-products .product-list {
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: center;
-}
-
-.featured-products .product-list div {
-  position: relative;
-  width: 300px;
-  height: 300px;
-  margin: 0.5%;
-  background-color: white;
-  box-shadow: 0 2px 5px rgba(0,0,0,0.1);
-  border-radius: 10px;
-  text-align: center;
-  align-items: center;
-}
-.product-list img {
-  width: 60%;
-  height: 60%;
-  margin-top: 15px;
-
-}
-#coffee-accessories-intro {
-    padding: 20px;
-    text-align: center;
-}
-
-#coffee-accessories-intro .container {
-    max-width: 1200px;
-    margin: 0 auto;
-}
-
-#coffee-accessories-intro h1 {
-    color: #6b3636;
-    margin-bottom: 10px;
-}
-
-#coffee-accessories-intro p {
-    color: #555;
-    font-size: 16px;
-    line-height: 1.6;
-}
-
-.features {
-    display: flex;
-    justify-content: space-around;
-    margin-top: 20px;
-}
-
-.feature-item {
-    width: 30%;
-    padding: 10px;
-    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
-    border-radius: 5px;
-    background: #f9f9f9;
-}
-
-.feature-item img {
-    width: 100%;
-    height: auto;
-    border-radius: 5px;
-    margin-bottom: 15px;
-}
-
-.feature-item h3 {
-    color:  #877a32;
-}
-
-.feature-item p {
-    font-size: 14px;
-    color: #666;
-}
-
-@media (max-width: 768px) {
-    .features {
-        flex-direction: column;
-        align-items: center;
-    }
-
-    .feature-item {
-        width: 80%;
-        margin-bottom: 20px;
-    }
-}
-
-    </style>
+    <link rel="stylesheet" href="asseciories.css">
+    <script src="asseciories.js"></script>
 </head>
 
 <body>
     <header>
-        <div class="container">
+        <div class="nav_container">
             <img src="img/costa.svg" alt="" class="logo">
 
             <span class="search">
@@ -238,8 +23,6 @@
                     <li><a href="grounds.html">coffe Grounds</a></li>
                     <li><a href="coffe_makers.html">coffe Maker</a></li>
                     <li><a href="asseciories.html">accessories</a></li>
-                    <li><a href="about.html">About</a></li>
-                    <li><a href="contact.html">Contact</a></li>
 
                 </ul>
             </nav>
@@ -247,67 +30,49 @@
     </header>
 
 
-    <div style="width: 80%;margin-left: auto;margin-right: auto;">
+
+    <br>
+    <img src="img/introac.jpg" class="intro" alt="">
+    <section id="coffee-accessories-intro">
         <br>
-        <section id="coffee-accessories-intro">
+        <div class="intro_container">
+            <h1 style="font-size: xx-large;">Explore Our Premium Coffee Accessories</h1>
+            <p>Enhance your coffee experience with our high-quality, durable coffee accessories. Whether you're a
+                beginner or a seasoned barista, our carefully selected range is designed to perfect your coffee routine.
+            </p>
             <br>
-            <div class="container">
-                <h1 style="font-size: xx-large;">Explore Our Premium Coffee Accessories</h1>
-                <p>Enhance your coffee experience with our high-quality, durable coffee accessories. Whether you're a beginner or a seasoned barista, our carefully selected range is designed to perfect your coffee routine.</p>
-                <br>
-                <div class="features">
-                    <div class="feature-item">
-                        <h3>Durable Materials</h3>
-                        <p>Our accessories are crafted from materials that stand the test of time and use.</p>
-                    </div>
-                    <div class="feature-item">
-                        <h3>Precision Brewing</h3>
-                        <p>Achieve perfect brews every time with precise measurements and quality tools.</p>
-                    </div>
-                    <div class="feature-item">
-                        <h3>Stylish Designs</h3>
-                        <p>Not only functional but also aesthetically pleasing, blending seamlessly into your kitchen decor.</p>
-                    </div>
+            <div class="features">
+                <div class="feature">
+                    <h3>Durable Materials</h3>
+                    <p>Our accessories are crafted from materials that stand the test of time and use.</p>
                 </div>
-            </section>
-            <br><br><br>
+                <div class="feature">
+                    <h3>Precision Brewing</h3>
+                    <p>Achieve perfect brews every time with precise measurements and quality tools.</p>
+                </div>
+                <div class="feature">
+                    <h3>Stylish Designs</h3>
+                    <p>Not only functional but also aesthetically pleasing, blending seamlessly into your kitchen decor.
+                    </p>
+                </div>
+            </div>
+    </section>
+    <br><br><br>
 
-        <div class="featured-products">
-            <h4 style="font-size: 40px;text-align: center;color: #ab785a;">Featured Products:</h4>
-            <div class="product-list">
-            <div>
-                <img src="https://ecscoffee.com/cdn/shop/products/ecm-pressure-regulating-tamper.jpg?v=1681302105&width=900"
-                    alt="Pressure Regulating Tamper">
-                <h3>Pressure Regulating Tamper</h3>
-                <p>$9.99</p>
-            </div>
-            <div>
-                <img src="https://ecscoffee.com/cdn/shop/products/crema-the-wdt-tool-1.jpg?v=1646845280&width=900"
-                    alt="Crema The WDT Tool">
-                <h3>Crema The WDT Tool</h3>
-                <p>$4.99</p>
-            </div>
-            <div>
-                <img src="https://ecscoffee.com/cdn/shop/products/crema-53mm-dosing-cup-1.jpg?v=1646929540&width=900"
-                    alt="Crema 53.4 mm Dosing Cup, Brushed Silver">
-                <h3>Crema 53.4 mm Dosing Cup, Brushed Silver</h3>
-                <p>$4.99</p>
-            </div>
-            <div>
-                <img src="https://ecscoffee.com/cdn/shop/products/54mm_dosing_funnel_crema.jpg?v=1651233574&width=900"
-                    alt="Crema 54mm Dosing Funnel">
-                <h3>Crema 54mm Dosing Funnel</h3>
-                <p>$4.99</p>
-            </div>
-            <div>
-                <img src="https://ecscoffee.com/cdn/shop/products/Crema-53mm-Tamper-Distributor-Combo-6.jpg?v=1646932262&width=900"
-                    alt="Crema 53.3mm Tamper & Distributor Combo">
-                <h3>Crema 53.3mm Tamper & Distributor Combo</h3>
-                <p>$4.99</p>
-            </div>
 
+    <div class="container">
+        <div class="menu">
+            <h4>Brands</h4>
+            <ul>
+                <li><input type="checkbox" value="Crema Coffee Products"><span>Crema Coffee Products</span></li>
+                <li><input type="checkbox" value="Technivorm Moccamaster"><span>Technivorm Moccamaster</span></li>
+                <li><input type="checkbox" value="Chemex"><span>Chemex</span></li>
+                <li><input type="checkbox" value="AeroPress"><span>AeroPress</span></li>
+            </ul>
         </div>
+        <div class="products"></div>
     </div>
+    <br>
     <footer>
         <p>Contact us at support@coffeecentral.com</p>
     </footer>

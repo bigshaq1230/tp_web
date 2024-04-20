@@ -5,369 +5,8 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
-    <style>
-        /*
-        .btn-31,
-        .btn-31 *,
-        .btn-31 :after,
-        .btn-31 :before,
-        .btn-31:after,
-        .btn-31:before {
-            border: 0 solid;
-            box-sizing: border-box;
-        }
-
-        .btn-31 {
-            -webkit-tap-highlight-color: transparent;
-            -webkit-appearance: button;
-            background-color: #000;
-            background-image: none;
-            color: #fff;
-            cursor: pointer;
-            font-family: ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont,
-                Segoe UI, Roboto, Helvetica Neue, Arial, Noto Sans, sans-serif,
-                Apple Color Emoji, Segoe UI Emoji, Segoe UI Symbol, Noto Color Emoji;
-            font-size: 100%;
-            font-weight: 900;
-            line-height: 1.5;
-            margin: 0;
-            -webkit-mask-image: -webkit-radial-gradient(#000, #fff);
-            padding: 0;
-        }
-
-        .btn-31:disabled {
-            cursor: default;
-        }
-
-        .btn-31:-moz-focusring {
-            outline: auto;
-        }
-
-        .btn-31 svg {
-            display: block;
-            vertical-align: middle;
-        }
-
-        .btn-31 [hidden] {
-            display: none;
-        }
-
-        .btn-31 {
-            border-width: 1px;
-            padding: 1rem 2rem;
-            position: relative;
-            text-transform: uppercase;
-        }
-
-        .btn-31:before {
-            --progress: 100%;
-            background: #fff;
-            -webkit-clip-path: polygon(100% 0,
-                    var(--progress) var(--progress),
-                    0 100%,
-                    100% 100%);
-            clip-path: polygon(100% 0,
-                    var(--progress) var(--progress),
-                    0 100%,
-                    100% 100%);
-            content: "";
-            inset: 0;
-            position: absolute;
-            transition: -webkit-clip-path 0.2s ease;
-            transition: clip-path 0.2s ease;
-            transition: clip-path 0.2s ease, -webkit-clip-path 0.2s ease;
-        }
-
-        .btn-31:hover:before {
-            --progress: 0%;
-        }
-
-        .btn-31 .text-container {
-            display: block;
-            overflow: hidden;
-            position: relative;
-        }
-
-        .btn-31 .text {
-            display: block;
-            font-weight: 900;
-            mix-blend-mode: difference;
-            position: relative;
-        }
-
-        .btn-31:hover .text {
-            -webkit-animation: move-up-alternate 0.3s ease forwards;
-            animation: move-up-alternate 0.3s ease forwards;
-        }
-
-        @-webkit-keyframes move-up-alternate {
-            0% {
-                transform: translateY(0);
-            }
-
-            50% {
-                transform: translateY(80%);
-            }
-
-            51% {
-                transform: translateY(-80%);
-            }
-
-            to {
-                transform: translateY(0);
-            }
-        }
-
-        @keyframes move-up-alternate {
-            0% {
-                transform: translateY(0);
-            }
-
-            50% {
-                transform: translateY(80%);
-            }
-
-            51% {
-                transform: translateY(-80%);
-            }
-
-            to {
-                transform: translateY(0);
-            }
-        }
-*/
-        @import url('https://fonts.googleapis.com/css?family=Work+Sans:400,600');
-
-        body {
-            margin: 0;
-            background: #222;
-            font-family: 'Work Sans', sans-serif;
-            font-weight: 800;
-        }
-
-        header {
-            background: #ab785a;
-        }
-
-        header::after {
-            content: '';
-            display: table;
-            clear: both;
-        }
-
-        .logo {
-            position: relative;
-            float: left;
-            padding: 10px 0;
-            height: 5vh;
-            margin-left: 5%;
-        }
-
-        nav {
-            float: right;
-        }
-
-        nav ul {
-            margin: 0;
-            padding: 0;
-            list-style: none;
-        }
-
-        nav li {
-            display: inline-block;
-            margin-left: 50px;
-            padding-top: 25px;
-
-            position: relative;
-        }
-
-        nav a {
-            color: #444;
-            text-decoration: none;
-            text-transform: uppercase;
-            font-size: 14px;
-        }
-
-        nav a:hover {
-            color: #000;
-        }
-
-        nav a::before {
-            content: '';
-            display: block;
-            height: 5px;
-            background-color: #444;
-
-            position: absolute;
-            top: 0;
-            width: 0%;
-
-            transition: all ease-in-out 250ms;
-        }
-
-        nav a:hover::before {
-            width: 100%;
-        }
-
-        nav ul li a.active {
-            color: wheat;
-            /* Color when link is active */
-        }
-
-
-        .search input {
-            border: 0;
-            border-radius: 4px;
-            outline: 0;
-            width: 250px;
-            /* Sets the width of the input field */
-            margin-left: 5%;
-
-        }
-
-        .search * {
-            position: relative;
-            padding-top: 100px;
-            align-items: center;
-            top: 10px;
-
-            height: 40px;
-            /* Sets the height of the input field */
-            font-size: 20px;
-            /* Increases the font size inside the input field */
-            padding: 5px 10px;
-        }
-
-
-
-
-        /* Footer */
-        footer {
-            background-color: #463f3a;
-            color: white;
-            text-align: center;
-            padding: 10px;
-
-            max-width: 100vw;
-        }
-
-        footer p {
-            font-size: 1em;
-        }
-
-        img.intro {
-            width: 100%;
-            object-fit: contain;
-        }
-
-        .test {
-            display: block;
-            text-align: center;
-        }
-
-        .test div {
-            display: inline-block;
-        }
-
-        .categories {
-            margin: 20px 0;
-            text-align: center;
-        }
-
-        .category-list {
-            display: flex;
-            justify-content: center;
-            gap: 50px;
-
-        }
-
-        .category-item {
-            height: 300px;
-            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
-            margin: 10px;
-            text-align: center;
-            border-radius: 10px;
-            transition: transform 0.3s ease, box-shadow 0.3s ease;
-            cursor: pointer;
-        }
-
-        .category-item img {
-            width: auto;
-            height: 100%;
-            border-radius: 8px;
-
-        }
-
-        .category-item:hover {
-            transform: scale(1.05);
-            /* Scales up the div */
-            box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
-            /* Adds a shadow effect */
-
-        }
-
-        .category-item h3 {
-            margin: 0;
-            margin-top: 10px;
-            /* Space between image and text */
-            color: #8c7474;
-            /* Text color */
-        }
-        .nav_container {
-            width: 90%;
-            margin-left: auto;
-            margin-right: auto;
-        }
-
-        .container {
-            display: flex;
-            flex-wrap: wrap;
-            -ms-flex-item-align: baseline;
-            gap: 20px;
-            /* Space between the menu and products */
-            flex-wrap: nowrap;
-            flex-direction: row;
-        }
-
-        .menu {
-            flex: 0 0 150px;
-            /* Fixed width of 200px, does not grow or shrink */
-            min-width: 100px;
-            /* Minimum width, identical to flex-basis for clarity */
-        }
-
-        .menu ul {
-            list-style: none;
-            padding: 0;
-        }
-
-
-        .products {
-            display: flex;
-            flex-wrap: wrap;
-            gap: 10px;
-            /* Space between products */
-        }
-
-        .product {
-            flex: 0 0 300px;
-            /* Does not grow or shrink, fixed basis of 300px */
-            width: 300px;
-            /* Strict width of 300px */
-            height: 300px;
-            /* Strict height of 300px */
-            background: #ddd;
-            padding: 20px;
-            text-align: center;
-            box-sizing: border-box;
-            /* Include padding in the width and height */
-        }
-        .product img {
-            height: 90%;
-            width: 100%;
-            object-fit: contain;
-        }
-    </style>
+    <link rel="stylesheet" href="maker.css">
+    <script src="maker.js"></script>
 </head>
 
 <body>
@@ -384,8 +23,6 @@
                     <li><a href="grounds.html">coffe Grounds</a></li>
                     <li><a href="coffe_makers.html">coffe Maker</a></li>
                     <li><a href="asseciories.html">accessories</a></li>
-                    <li><a href="about.html">About</a></li>
-                    <li><a href="contact.html">Contact</a></li>
 
                 </ul>
             </nav>
@@ -402,39 +39,40 @@
         <h2 style="margin-bottom: 0;">Coffe Makers</h2>
         <div style="width: 10%;height: 5px;background-color: red;margin-top: 5px;"></div>
     </div>
+
     <div class="categories">
         <div class="category-list">
-            <a href="asseciories.html" style="text-decoration: none; color: inherit;">
+
 
                 <div class="category-item">
                     <img src="img/automatic-coffee-makers-featured-image_600x.jpg" alt="Coffee Beans">
                     <h3>Automatic Coffee Makers</h3>
                 </div>
-            </a>
 
-            <a href="asseciories.html" style="text-decoration: none; color: inherit;">
+
+
 
                 <div class="category-item">
                     <img src="img/single.jpg" alt="Coffee Beans">
                     <h3>Single Serve Coffee</h3>
                 </div>
-            </a>
 
-            <a href="asseciories.html" style="text-decoration: none; color: inherit;">
+
+
 
                 <div class="category-item">
                     <img src="img/pour.jpg" alt="Coffee Beans">
                     <h3>Pour Over Coffee Maker</h3>
                 </div>
-            </a>
 
-            <a href="asseciories.html" style="text-decoration: none; color: inherit;">
+
+
 
                 <div class="category-item">
                     <img src="img/french.jpg" alt="Coffee Beans">
                     <h3>French Press</h3>
                 </div>
-            </a>
+
 
         </div>
     </div>
@@ -455,39 +93,15 @@
 
     <div class="container">
         <div class="menu">
-            <h4>Filters</h4>
+            <h4>Brands</h4>
             <ul>
-                <li><input type="checkbox"><span>nespressoo</span></li>
-                <li><input type="checkbox"><span>Aeropress</span></li>
-                <li><input type="checkbox"><span>Capresso</span></li>
-                <li><input type="checkbox"><span>Bunn</span></li>
-                <li><input type="checkbox"><span>Bonavita</span></li>
-                <li><input type="checkbox"><span>Bodum</span></li>
+                <li><input type="checkbox" value="Nespressoo"><span>Nespressoo</span></li>
+                <li><input type="checkbox" value="Chemex"><span>Chemex</span></li>
+                <li><input type="checkbox" value="Hario"><span>Hario</span></li>
+                <li><input type="checkbox" value="AeroPress"><span>AeroPress</span></li>
             </ul>
         </div>
-        <div class="products">
-            <div class="product">
-                <img src="img/chemex-6-cup.webp" alt="">Chemex CM-6A Classic Series 6-Cup Coffeemaker
-
-            </div>
-            <div class="product"><img src="https://ecscoffee.com/cdn/shop/products/aeropress-coffee-maker-new.jpg?v=1597323596&width=900" alt="">
-                AeroPress Coffee & Espresso Maker
-            </div>
-            <div class="product"><img src="https://ecscoffee.com/cdn/shop/products/keurig-k1500.jpg?v=1569549492" alt="">Keurig K1500 Small Business Brewing System
-            </div>
-            <div class="product"><img src="https://ecscoffee.com/cdn/shop/products/smeg-coffee-maker-white-DCF02WHUS.jpg?v=1587479943&width=900" alt="">
-                Smeg 50s Style Drip Filter Coffee Machine, White #DCF02WHUS</div>
-            <div class="product">Product 4</div>
-            <div class="product">Product 4</div>
-            <div class="product">Product 4</div>
-            <div class="product">Product 4</div>
-            <div class="product">Product 4</div>
-            <div class="product">Product 4</div>
-            <div class="product">Product 4</div>
-            <div class="product">Product 4</div>
-            <div class="product">Product 4</div>
-            <!-- Add more products as needed -->
-        </div>
+        <div class="products"></div>
     </div>
     <footer>
         <p>Contact us at support@coffeecentral.com</p>
