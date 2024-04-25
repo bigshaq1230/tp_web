@@ -240,3 +240,34 @@ img.intro {
     list-style: none;
     padding: 0;
 }
+.cart-icon {
+    position: relative;
+    display: inline-block;
+}
+
+.cart-details {
+    display: none; /* Initially hidden */
+    position: absolute;
+    right: 0;
+    background-color: white;
+    box-shadow: 0 8px 16px rgba(0,0,0,0.2);
+    z-index: 1;
+    width: 200px; /* Adjust as necessary */
+    padding: 10px;
+}
+
+.cart-icon:hover .cart-details {
+    display: block; /* Show on hover */
+}
+.product button {
+    background-color: #4CAF50;
+    color: white;
+    padding: 10px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.product button:hover {
+    background-color: #45a049;
+}
