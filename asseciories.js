@@ -168,6 +168,10 @@ document.addEventListener("DOMContentLoaded", function () {
                 btn.textContent = "add to cart";
 
                 btn.onclick = function () { addToCart(product); };
+                img.onclick = function () {
+                    localStorage.setItem('prod', JSON.stringify(product));
+                    window.location.href = 'prod.html';
+                }
                 div.appendChild(btn)
                 document.querySelector(".products").appendChild(div);
             }

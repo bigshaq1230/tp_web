@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Product Page</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background: #f4f4f4;
+            margin: 0;
+            padding: 20px;
+        }
+        .product-container {
+            background: white;
+            width: 300px;
+            margin: 0 auto;
+            padding: 20px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+        .product-image {
+            width: 100%;
+            height: auto;
+        }
+    </style>
+</head>
+<body>
+    <div class="product-container">
+        <img src="path_to_product_image.jpg" alt="Product Name" class="product-image">
+        <p class="description"></p>
+        <p class="price"></p>
+    </div>
+    <script>
+        let prod = JSON.parse(localStorage.getItem('prod'));
+        if (prod) {
+            document.querySelector(".product-image").src = prod.url;  // Ensure the class selector is used
+            document.querySelector(".description").textContent = prod.desc;  // Use querySelector for single elements
+            document.querySelector(".price").textContent = `$${prod.price}`;  // Format price with $
+        } else {
+            console.log('No product data found in localStorage.');
+        }
+    </script>
+</body>
+</html>

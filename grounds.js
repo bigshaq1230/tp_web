@@ -98,7 +98,7 @@ function displayTotal() {
 }
 
 // Ensure to call `displayCart()` on page load to show the cart if it already has items
-document.addEventListener('DOMContentLoaded', function() {
+document.addEventListener('DOMContentLoaded', function () {
     displayCart();
 });
 
@@ -160,6 +160,10 @@ document.addEventListener("DOMContentLoaded", function () {
                 btn.textContent = "add to cart";
 
                 btn.onclick = function () { addToCart(product); };
+                img.onclick = function () {
+                    localStorage.setItem('prod', JSON.stringify(product));
+                    window.location.href = 'prod.html';
+                }
                 div.appendChild(btn)
                 document.querySelector(".products").appendChild(div);
             }

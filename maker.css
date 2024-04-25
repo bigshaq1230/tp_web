@@ -43,18 +43,18 @@ nav li {
     position: relative;
 }
 
-nav a {
+li > a {
     color: #444;
     text-decoration: none;
     text-transform: uppercase;
     font-size: 14px;
 }
 
-nav a:hover {
+li > a:hover {
     color: #000;
 }
 
-nav a::before {
+li > a::before {
     content: '';
     display: block;
     height: 5px;
@@ -67,7 +67,7 @@ nav a::before {
     transition: all ease-in-out 250ms;
 }
 
-nav a:hover::before {
+li > a:hover::before {
     width: 100%;
 }
 
@@ -228,6 +228,7 @@ img.intro {
     width: 250px;
     object-fit: contain;
     border-radius: 5px;
+    cursor: pointer;
 }
 .cart-icon {
     position: relative;
@@ -241,14 +242,14 @@ img.intro {
     background-color: white;
     box-shadow: 0 8px 16px rgba(0,0,0,0.2);
     z-index: 1;
-    width: 200px; /* Adjust as necessary */
+    width: 300px; /* Adjust as necessary */
     padding: 10px;
 }
 
 .cart-icon:hover .cart-details {
     display: block; /* Show on hover */
 }
-.product button {
+.product button,header button {
     background-color: #4CAF50;
     color: white;
     padding: 10px;
@@ -257,6 +258,6 @@ img.intro {
     cursor: pointer;
 }
 
-.product button:hover {
+.product button:hover,header button:hover {
     background-color: #45a049;
 }
