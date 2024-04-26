@@ -21,7 +21,7 @@
 
         .login-container,
         .logout-container {
-            text-align: center;
+            text-align: start;
             background: white;
             padding: 20px;
             border-radius: 8px;
@@ -30,7 +30,7 @@
 
         input[type="text"],
         input[type="password"] {
-            width: calc(100% - 22px);
+            width: 300px;
             padding: 10px;
             margin: 10px 0;
             border: 1px solid #ddd;
@@ -45,6 +45,7 @@
             border-radius: 4px;
             cursor: pointer;
             margin-top: 10px;
+            margin-left: 70%;
         }
 
         a {
@@ -56,30 +57,27 @@
 
 <body>
     <div class="login-container">
-        <h2>Login to Your Account </h2>
+        <h2>Signup for free </h2>
         <form id="loginForm">
+
+            <label for="username">Email:</label>
+            <input type="text" id="username" name="username" required><br>
+
             <label for="username">Username:</label>
-            <input type="text" id="username" name="username" required>
+            <input type="text" id="username" name="username" required> <br>
+
             <label for="password">Password:</label>
-            <input type="password" id="password" name="password" required>
+            <input type="password" id="password" name="password" required><br>
+
             <button type="submit">Login</button><br><br>
-            <a href="signup.html">or sign up here </a>
         </form>
     </div>
     <script>
-        document.getElementById('loginForm').onsubmit = function (event) {
+            document.getElementById('loginForm').onsubmit = function (event) {
             event.preventDefault();
-            var username = document.getElementById('username').value;
-            var password = document.getElementById('password').value;
-            if (username === "admin" && password === "admin") {
-                localStorage.setItem('user',"true")
-                alert("Logged in successfully");
-                window.location.href = 'index.html'; // redirect to home page or dashboard
-            } else {
-                alert("Invalid username or password");
-            }
+            localStorage.setItem('user',"true")
+            window.location.href = 'index.html';
+
         };
     </script>
 </body>
-
-</html>
