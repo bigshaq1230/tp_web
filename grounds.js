@@ -103,7 +103,7 @@ document.addEventListener('DOMContentLoaded', function () {
 function updateCartUI() {
     const cartItemsList = document.getElementById('cart-items');
     const cartTotalSpan = document.getElementById('cart-total');
-    cartItemsList.innerHTML = ''; 
+    cartItemsList.innerHTML = '';
 
     cart.forEach(item => {
         const itemElement = document.createElement('li');
@@ -199,5 +199,20 @@ document.addEventListener("DOMContentLoaded", function() {
             window.location.href = "login.html";
         }
         loadUser();
+    });
+});
+window.addEventListener('scroll', () => {
+    const image = document.querySelectorAll('#anime');
+    image.forEach(element => {
+
+        const position = element.getBoundingClientRect();
+
+        if (position.top < window.innerHeight && position.bottom >= 0) {
+            element.style.opacity = 1;
+            element.style.transform = 'translateY(0px)';
+        } else {
+            element.style.opacity = 0;
+            element.style.transform = 'translateY(50px)';
+        }
     });
 });

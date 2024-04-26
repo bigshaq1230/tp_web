@@ -210,3 +210,18 @@ document.addEventListener("DOMContentLoaded", function() {
         loadUser();
     });
 });
+window.addEventListener('scroll', () => {
+    const image = document.querySelectorAll('#anime');
+    image.forEach(element => {
+
+        const position = element.getBoundingClientRect();
+
+        if (position.top < window.innerHeight && position.bottom >= 0) {
+            element.style.opacity = 1;
+            element.style.transform = 'translateY(0px)';
+        } else {
+            element.style.opacity = 0;
+            element.style.transform = 'translateY(50px)';
+        }
+    });
+});

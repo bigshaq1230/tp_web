@@ -439,3 +439,22 @@ figure figcaption {
 a {
     cursor: pointer;
 }
+
+
+
+@keyframes fadeIn {
+    from { opacity: 0; }
+    to { opacity: 1; }
+  }
+
+  .hero {
+    animation: fadeIn 2s ease-in-out;
+  }
+
+
+
+  #anime {
+    transition: opacity 0.5s ease-in-out, transform 0.5s ease-in-out;
+    opacity: 0;
+    transform: translateY(50px);
+  }
