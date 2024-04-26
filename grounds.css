@@ -84,7 +84,6 @@ li>a:hover::before {
     border-radius: 4px;
     outline: 0;
     width: 250px;
-    /* Sets the width of the input field */
     margin-left: 5%;
 
 }
@@ -96,9 +95,8 @@ li>a:hover::before {
     top: 10px;
 
     height: 40px;
-    /* Sets the height of the input field */
+
     font-size: 20px;
-    /* Increases the font size inside the input field */
     padding: 5px 10px;
 }
 
@@ -225,16 +223,13 @@ footer p {
     flex-wrap: wrap;
     -ms-flex-item-align: baseline;
     gap: 20px;
-    /* Space between the menu and products */
     flex-wrap: nowrap;
     flex-direction: row;
 }
 
 .menu {
     flex: 0 0 250px;
-    /* Fixed width of 200px, does not grow or shrink */
     min-width: 250px;
-    /* Minimum width, identical to flex-basis for clarity */
     margin-left: 12px;
 }
 .menu h4 {
@@ -250,18 +245,15 @@ footer p {
     display: flex;
     flex-wrap: wrap;
     gap: 10px;
-    /* Space between products */
 }
 
 .product {
     flex: 0 0;
-    /* Does not grow or shrink, fixed basis of 300px */
-    /* Strict width of 300px */
-    /* Strict height of 300px */
+
     padding: 20px;
     text-align: center;
     box-sizing: border-box;
-    /* Include padding in the width and height */
+
     color: aliceblue;
 }
 
@@ -295,21 +287,18 @@ header button:hover {
 
 .cart-details {
     display: none;
-    /* Initially hidden */
     position: absolute;
     right: 0;
     box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
     background-color:#372828;
     z-index: 1;
     width: 300px;
-    /* Adjust as necessary */
     padding: 10px;
     border-radius: 5px;
 }
 
 .cart-icon:hover .cart-details {
     display: block;
-    /* Show on hover */
 }
 
 .promo {
@@ -392,14 +381,12 @@ figure figcaption {
 .imgnexttotext {
     display: flex;
     align-items: center;
-    /* Vertically align items */
     gap: 20px;
     margin-top: 3%;
     justify-content: center;
     margin: 5%;
 }
 
-/* Style the image and text as needed */
 
 .imgnexttotext div {
     width: 30%;

@@ -47,7 +47,6 @@ function getCartTotal() {
     return cart.reduce((total, item) => total + item.price * item.quantity, 0);
 }
 function addToCart(product) {
-    // Check if the product is already in the cart by comparing unique identifiers, like `desc` or `url`
     const existingProduct = cart.find(p => p.desc === product.desc);
     if (existingProduct) {
         existingProduct.quantity += 1;
@@ -61,8 +60,7 @@ function addToCart(product) {
 
 function updateCart() {
     localStorage.setItem('cart', JSON.stringify(cart));
-    displayCart(); // Updating the cart UI when the cart changes
-
+    displayCart();
 }
 function displayTotal() {
     const total = getCartTotal();
@@ -71,7 +69,7 @@ function displayTotal() {
 
 function displayCart() {
     const cartItemsList = document.getElementById('cart-items');
-    cartItemsList.innerHTML = ''; // Clear existing items
+    cartItemsList.innerHTML = '';
 
     cart.forEach(item => {
         const itemElement = document.createElement('li');
@@ -97,7 +95,6 @@ function displayTotal() {
     document.getElementById('cart-total').textContent = `$${total.toFixed(2)}`;
 }
 
-// Ensure to call `displayCart()` on page load to show the cart if it already has items
 document.addEventListener('DOMContentLoaded', function () {
     displayCart();
 });
@@ -106,7 +103,7 @@ document.addEventListener('DOMContentLoaded', function () {
 function updateCartUI() {
     const cartItemsList = document.getElementById('cart-items');
     const cartTotalSpan = document.getElementById('cart-total');
-    cartItemsList.innerHTML = ''; // Clear existing items
+    cartItemsList.innerHTML = ''; 
 
     cart.forEach(item => {
         const itemElement = document.createElement('li');
@@ -134,7 +131,7 @@ document.addEventListener("DOMContentLoaded", function () {
     });
 
     function filterProducts() {
-        document.querySelector(".products").innerHTML = '';  // Clear existing products
+        document.querySelector(".products").innerHTML = '';
         list.forEach(function (product) {
             if (brands.length === 0 || brands.includes(product.brand)) {
                 let div = document.createElement("div");
@@ -170,7 +167,6 @@ document.addEventListener("DOMContentLoaded", function () {
         });
     }
 
-    // Initialize display
     filterProducts();
 });
 
@@ -183,3 +179,25 @@ function Product(url, desc, price, ratings, brand) {
     this.ratings = ratings;
     this.brand = brand;
 }
+function loadUser() {
+    var user = localStorage.getItem('user');
+    if (user === "true") {
+        document.getElementById("log").textContent = "Logout";
+    } else {
+        document.getElementById("log").textContent = "Login";
+    }
+}
+
+document.addEventListener("DOMContentLoaded", function() {
+    loadUser();
+    document.getElementById("log").addEventListener("click", () => {
+        var user = localStorage.getItem('user');
+        if (user === "true") {
+            localStorage.setItem('user', "false");
+            alert('Logged out successfully.');
+        } else {
+            window.location.href = "login.html";
+        }
+        loadUser();
+    });
+});

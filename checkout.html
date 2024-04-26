@@ -39,14 +39,22 @@
             </div>
         </form>
     </div>
-    <script >document.addEventListener('DOMContentLoaded', function () {
+    <script>
+    document.addEventListener('DOMContentLoaded', function () {
         displayCartItems();
+        document.getElementById("checkoutForm").onsubmit = function(event) {
+            event.preventDefault();
+            cart = []
+            console.log("try")
+            localStorage.setItem('cart',JSON.stringify(cart))
+            window.location.href = 'index.html';
+        }
     });
 
     function displayCartItems() {
         const cart = JSON.parse(localStorage.getItem('cart')) || [];
         const cartItemsList = document.getElementById('cart-items-list');
-        cartItemsList.innerHTML = ''; // Clear the list first
+        cartItemsList.innerHTML = ''; 
         var total = 0
         cart.forEach(item => {
             const itemElement = document.createElement('li');
@@ -64,10 +72,13 @@
         kok.textContent = "Totale = "+total + "$"
         cartItemsList.appendChild(kok)
 
-        if (cart.length === 0) {
+        if (cart.length == 0) {
             cartItemsList.textContent = 'Your cart is empty.';
+            console.log(cart)
+            console.log('test')
         }
-    }</script>
+    }
+    </script>
 </body>
 
 </html>

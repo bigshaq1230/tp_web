@@ -3,8 +3,10 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Product Page</title>
+    <title>COSTA</title>
     <link rel="stylesheet" href="grounds.css">
+    <link rel="icon" href="img/icon.svg">
+
     <style>
         .product-container {
             position: absolute;
@@ -31,9 +33,9 @@
     <script>
         let prod = JSON.parse(localStorage.getItem('prod'));
         if (prod) {
-            document.querySelector(".product-image").src = prod.url;  // Ensure the class selector is used
-            document.querySelector(".description").textContent = prod.desc;  // Use querySelector for single elements
-            document.querySelector(".price").textContent = `$${prod.price}`;  // Format price with $
+            document.querySelector(".product-image").src = prod.url;
+            document.querySelector(".description").textContent = prod.desc;
+            document.querySelector(".price").textContent = `$${prod.price}`; 
         } else {
             console.log('No product data found in localStorage.');
         }

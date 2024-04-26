@@ -4,7 +4,9 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>LOGIN</title>
+    <link rel="icon" href="img/icon.svg">
+
     <style>
         body,
         html {
@@ -74,7 +76,7 @@
             if (username === "admin" && password === "admin") {
                 localStorage.setItem('user',"true")
                 alert("Logged in successfully");
-                window.location.href = 'index.html'; // redirect to home page or dashboard
+                window.location.href = 'index.html';
             } else {
                 alert("Invalid username or password");
             }
