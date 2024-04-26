@@ -447,3 +447,8 @@ figure figcaption {
 #cart-items-list span {
     margin: 1%;
 }
+
+
+a {
+    cursor: pointer;
+}

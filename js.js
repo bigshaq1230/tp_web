@@ -1,5 +1,6 @@
 
 let cart = JSON.parse(localStorage.getItem('cart')) || [];
+let user = localStorage.getItem('user') || "false"
 function getCartTotal() {
     return cart.reduce((total, item) => total + item.price * item.quantity, 0);
 }
@@ -75,3 +76,27 @@ function updateCartUI() {
     cartTotalSpan.textContent = total.toFixed(2);
 }
 
+
+function loadUser() {
+    // Check if 'user' in localStorage is "true"
+    var user = localStorage.getItem('user');  // Retrieve the user status from localStorage
+    if (user === "true") {
+        document.getElementById("log").textContent = "Logout";
+    } else {
+        document.getElementById("log").textContent = "Login";
+    }
+}
+
+document.addEventListener("DOMContentLoaded", function() {
+    loadUser();  // Initialize the login/logout text based on user status
+    document.getElementById("log").addEventListener("click", () => {
+        var user = localStorage.getItem('user');  // Retrieve the user status from localStorage each time
+        if (user === "true") {
+            localStorage.setItem('user', "false");  // Set user to "false" on logout
+            alert('Logged out successfully.');  // Provide feedback to user
+        } else {
+            window.location.href = "login.html";  // Redirect to login page on click
+        }
+        loadUser();  // Update the login/logout text accordingly
+    });
+});
