@@ -5,55 +5,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Simple Checkout Page</title>
-    <style>
-        body {
-            font-family: Arial, sans-serif;
-            background: #f4f4f4;
-            margin: 0;
-            padding: 20px;
-        }
-
-        .checkout-container {
-            background: white;
-            width: 700px;
-            padding: 20px;
-            margin: 0 auto;
-            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-        }
-
-        .form-group {
-            margin-bottom: 15px;
-        }
-
-        .form-group label {
-            display: block;
-            margin-bottom: 5px;
-        }
-
-        .form-group input[type="text"],
-        .form-group input[type="email"] {
-            padding: 8px;
-            border: 1px solid #ccc;
-            border-radius: 4px;
-        }
-
-        button {
-            background-color: #af4c4c;
-            color: white;
-            border: none;
-            padding: 10px 20px;
-            text-align: center;
-            text-decoration: none;
-            display: inline-block;
-            font-size: 16px;
-            margin: 4px 2px;
-            cursor: pointer;
-            border-radius: 5px;
-        }
-        #cart-items-list img {
-            width: 100px;
-        }
-    </style>
+    <link rel="stylesheet" href="grounds.css">
 </head>
 
 <body>
@@ -98,10 +50,12 @@
         var total = 0
         cart.forEach(item => {
             const itemElement = document.createElement('li');
-            itemElement.textContent = `${item.desc} - $${item.price} x ${item.quantity}`;
-            let img = document.createElement("img")
+            var img = document.createElement("img")
+            let text = document.createElement("span")
+            text.textContent = `${item.desc} - $${item.price} x ${item.quantity}`;
             img.src = item.url
             itemElement.appendChild(img)
+            itemElement.appendChild(text)
             cartItemsList.appendChild(itemElement);
             total = total + item.price
 

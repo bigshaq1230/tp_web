@@ -5,6 +5,7 @@ body {
     background: #222;
     font-family: 'Work Sans', sans-serif;
     font-weight: 800;
+    color: white;
 }
 
 .nav_container {
@@ -119,8 +120,11 @@ img.intro {
 .categories {
     margin: 50px 0;
     text-align: center;
-}
 
+}
+.categories h2 {
+    color: #ab785a;
+}
 .category-list {
     display: flex;
     justify-content: center;
@@ -161,18 +165,14 @@ footer p {
 
 .category-item:hover {
     transform: scale(1.05);
-    /* Scales up the div */
     box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
-    /* Adds a shadow effect */
 
 }
 
 .category-item h3 {
     margin: 0;
     margin-top: 10px;
-    /* Space between image and text */
-    color: #8c7474;
-    /* Text color */
+    color: white;
 }
 
 #coffee-accessories-intro {
@@ -186,12 +186,11 @@ footer p {
 }
 
 #coffee-accessories-intro h1 {
-    color: #6b3636;
+    color: #AF8260;
     margin-bottom: 10px;
 }
 
 #coffee-accessories-intro p {
-    color: #555;
     font-size: 16px;
     line-height: 1.6;
 }
@@ -206,33 +205,20 @@ footer p {
 .feature {
     width: 30%;
     padding: 10px;
-    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    box-shadow: 0 2px 5px rgba(103, 95, 95, 0.1);
     border-radius: 5px;
-    background: #f9f9f9;
+    background: #372828;
+}
+.feature h3{
+    color: #AF8260;
 }
 
 
-
-.feature h3 {
-    color: #877a32;
-}
 
 .feature p {
     font-size: 14px;
-    color: #666;
 }
 
-@media (max-width: 768px) {
-    .features {
-        flex-direction: column;
-        align-items: center;
-    }
-
-    .feature {
-        width: 80%;
-        margin-bottom: 20px;
-    }
-}
 
 .container {
     display: flex;
@@ -251,7 +237,9 @@ footer p {
     /* Minimum width, identical to flex-basis for clarity */
     margin-left: 12px;
 }
-
+.menu h4 {
+    color: #AF8260;
+}
 .menu ul {
     list-style: none;
     padding: 0;
@@ -310,12 +298,13 @@ header button:hover {
     /* Initially hidden */
     position: absolute;
     right: 0;
-    background-color: white;
     box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+    background-color:#372828;
     z-index: 1;
     width: 300px;
     /* Adjust as necessary */
     padding: 10px;
+    border-radius: 5px;
 }
 
 .cart-icon:hover .cart-details {
@@ -355,34 +344,24 @@ header button:hover {
     object-fit: scale-down;
 }
 
-.review-text {
-    color: #705b5b;
-}
-
-.review-author {
-    color: #7c6868;
-}
 
 .review h2 {
     text-align: center;
-    color: #0f4c81;
 }
 
 .hero {
-    color: rgb(255, 255, 255);
     text-align: center;
+    margin: 5%;
 }
 
 .hero h1 {
     font-size: 2.5em;
+    color: #ab785a;
 }
 
-.hero p {
-    font-size: 1.2em;
-    margin-bottom: 20px;
-}
 
-figure {
+
+.hero figure {
     display: flex;
     position: relative;
     justify-content: center;
@@ -390,18 +369,18 @@ figure {
 
 }
 
-figure img {
+.hero figure img {
     position: relative;
     border-radius: 25px;
-    width: 70%;
-    object-fit: contain;
-
+    width: 80%;
+    height: 50vh;
+    object-fit:cover;
 }
 
 
 
 figure figcaption {
-    color: aliceblue;
+    color: #463f3a;
     position: absolute;
     top: 15%;
     left: 18%;
@@ -416,27 +395,55 @@ figure figcaption {
     /* Vertically align items */
     gap: 20px;
     margin-top: 3%;
+    justify-content: center;
+    margin: 5%;
 }
 
 /* Style the image and text as needed */
 
 .imgnexttotext div {
-    margin-left: 30px;
-    /* Adjust spacing between image and text */
-    margin-right: 30px;
-    /* Adjust spacing between image and text */
-
-    /* Add other text styles here */
-    width: 40%;
-    font: optional;
+    width: 30%;
+    font-size: x-large;
 }
 
 .imgnexttotext img {
-    max-width: 80%;
-    /* Ensure the image doesn't overflow */
+    max-width: 50%;
     border-radius: 10px;
 }
 
-* {
-    color: white;
+.imgnexttotext div h3{
+    color: #ab785a;
+}
+.checkout-container {
+    background-color: #372424;
+    width: 50%;
+    margin-left: auto;
+    margin-right: auto;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.checkout-container .form-group {
+    text-align: center;
+    margin: 3%;
+}
+
+#cart-items-list li{
+    display: flex;
+    justify-content: start;
+    margin: 2%;
+}
+#cart-items-list li img {
+    height: 100px;
+    width: auto;
+}
+.checkout-container p {
+    text-align: end;
+}
+.checkout-container h2 {
+    text-align: center;
+}
+#cart-items-list span {
+    margin: 1%;
 }
