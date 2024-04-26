@@ -48,18 +48,18 @@ nav li {
     position: relative;
 }
 
-li > a {
+li>a {
     color: #444;
     text-decoration: none;
     text-transform: uppercase;
     font-size: 14px;
 }
 
-li > a:hover {
+li>a:hover {
     color: #000;
 }
 
-li > a::before {
+li>a::before {
     content: '';
     display: block;
     height: 5px;
@@ -72,14 +72,10 @@ li > a::before {
     transition: all ease-in-out 250ms;
 }
 
-li > a:hover::before {
+li>a:hover::before {
     width: 100%;
 }
 
-nav ul li a.active {
-    color: wheat;
-    /* Color when link is active */
-}
 
 
 .search input {
@@ -111,6 +107,15 @@ img.intro {
 
 }
 
+.test {
+    display: block;
+    text-align: center;
+}
+
+.test div {
+    display: inline-block;
+}
+
 .categories {
     margin: 50px 0;
     text-align: center;
@@ -122,6 +127,20 @@ img.intro {
     gap: 50px;
 
 }
+
+footer {
+    background-color: #463f3a;
+    color: white;
+    text-align: center;
+    padding: 10px;
+
+    max-width: 100vw;
+}
+
+footer p {
+    font-size: 1em;
+}
+
 
 .category-item {
     height: 300px;
@@ -156,6 +175,65 @@ img.intro {
     /* Text color */
 }
 
+#coffee-accessories-intro {
+    padding: 20px;
+    text-align: center;
+}
+
+#coffee-accessories-intro .intro_container {
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+#coffee-accessories-intro h1 {
+    color: #6b3636;
+    margin-bottom: 10px;
+}
+
+#coffee-accessories-intro p {
+    color: #555;
+    font-size: 16px;
+    line-height: 1.6;
+}
+
+
+.features {
+    display: flex;
+    justify-content: space-around;
+    margin-top: 20px;
+}
+
+.feature {
+    width: 30%;
+    padding: 10px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    border-radius: 5px;
+    background: #f9f9f9;
+}
+
+
+
+.feature h3 {
+    color: #877a32;
+}
+
+.feature p {
+    font-size: 14px;
+    color: #666;
+}
+
+@media (max-width: 768px) {
+    .features {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .feature {
+        width: 80%;
+        margin-bottom: 20px;
+    }
+}
+
 .container {
     display: flex;
     flex-wrap: wrap;
@@ -167,9 +245,9 @@ img.intro {
 }
 
 .menu {
-    flex: 0 0 150px;
+    flex: 0 0 250px;
     /* Fixed width of 200px, does not grow or shrink */
-    min-width: 200px;
+    min-width: 250px;
     /* Minimum width, identical to flex-basis for clarity */
     margin-left: 12px;
 }
@@ -206,7 +284,9 @@ img.intro {
     border-radius: 5px;
     cursor: pointer;
 }
-.product button,header button {
+
+.product button,
+header button {
     background-color: #4CAF50;
     color: white;
     padding: 10px;
@@ -215,25 +295,148 @@ img.intro {
     cursor: pointer;
 }
 
-.product button:hover,header button:hover {
+.product button:hover,
+header button:hover {
     background-color: #45a049;
 }
+
 .cart-icon {
     position: relative;
     display: inline-block;
 }
 
 .cart-details {
-    display: none; /* Initially hidden */
+    display: none;
+    /* Initially hidden */
     position: absolute;
     right: 0;
     background-color: white;
-    box-shadow: 0 8px 16px rgba(0,0,0,0.2);
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
     z-index: 1;
-    width: 300px; /* Adjust as necessary */
+    width: 300px;
+    /* Adjust as necessary */
     padding: 10px;
 }
 
 .cart-icon:hover .cart-details {
-    display: block; /* Show on hover */
+    display: block;
+    /* Show on hover */
+}
+
+.promo {
+    background-color: #deb887;
+    color: white;
+    padding: 20px;
+    text-align: center;
+    margin-top: 20px;
+}
+
+.reviews-container {
+    margin: 20px auto;
+    padding: 20px;
+    display: flex;
+    gap: 1%;
+    flex-wrap: wrap;
+}
+
+.review {
+    margin: 2%;
+    padding: 10px;
+    width: 250px;
+    height: auto;
+    border-radius: 25px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+.review img {
+    height: 50px;
+    width: auto;
+    margin-left: 35%;
+    object-fit: scale-down;
+}
+
+.review-text {
+    color: #705b5b;
+}
+
+.review-author {
+    color: #7c6868;
+}
+
+.review h2 {
+    text-align: center;
+    color: #0f4c81;
+}
+
+.hero {
+    color: rgb(255, 255, 255);
+    text-align: center;
+}
+
+.hero h1 {
+    font-size: 2.5em;
+}
+
+.hero p {
+    font-size: 1.2em;
+    margin-bottom: 20px;
+}
+
+figure {
+    display: flex;
+    position: relative;
+    justify-content: center;
+    align-items: center;
+
+}
+
+figure img {
+    position: relative;
+    border-radius: 25px;
+    width: 70%;
+    object-fit: contain;
+
+}
+
+
+
+figure figcaption {
+    color: aliceblue;
+    position: absolute;
+    top: 15%;
+    left: 18%;
+    display: block;
+    width: 25%;
+    height: 30%;
+}
+
+.imgnexttotext {
+    display: flex;
+    align-items: center;
+    /* Vertically align items */
+    gap: 20px;
+    margin-top: 3%;
+}
+
+/* Style the image and text as needed */
+
+.imgnexttotext div {
+    margin-left: 30px;
+    /* Adjust spacing between image and text */
+    margin-right: 30px;
+    /* Adjust spacing between image and text */
+
+    /* Add other text styles here */
+    width: 40%;
+    font: optional;
+}
+
+.imgnexttotext img {
+    max-width: 80%;
+    /* Ensure the image doesn't overflow */
+    border-radius: 10px;
+}
+
+* {
+    color: white;
 }
