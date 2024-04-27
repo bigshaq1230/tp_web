@@ -1,0 +1,1 @@
+e-commerce website that sells coffee with working cart 'panier'/checkout/login/logout/signup
